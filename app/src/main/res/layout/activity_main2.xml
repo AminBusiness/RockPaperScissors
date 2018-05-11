@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+
+    <TextView
+        android:id="@+id/textViewResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:lines="8"
+        android:text="@string/Results" />
+
+    <Button
+        android:id="@+id/buttonRock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewResults"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"
+        android:onClick="userChoiceRock"
+        android:text="@string/ROCK" />
+
+    <Button
+        android:id="@+id/buttonPaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonRock"
+        android:layout_centerHorizontal="true"
+        android:onClick="userChoicePaper"
+        android:text="@string/PAPER"
+        tools:text="PAPER" />
+
+    <Button
+        android:id="@+id/buttonScissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonPaper"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="userChoiceScissor"
+        android:text="@string/SCISSORS"
+        tools:text="SCISSORS" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewResults"
+        android:layout_alignLeft="@+id/buttonPaper"
+        android:layout_alignStart="@+id/buttonPaper"
+        android:onClick="clearResults"
+        android:text="@string/CLEAR" />
+
+    <WebView
+        android:id="@+id/rpsWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/buttonScissors"
+        android:layout_marginBottom="300dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginRight="300dp"
+        android:gravity="center" />
+</RelativeLayout>
